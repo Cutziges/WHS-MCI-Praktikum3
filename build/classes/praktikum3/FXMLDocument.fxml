@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import praktikum3.MaskField?>
+<?import praktikum3.NumberTextField?>
+
+<TabPane prefHeight="660.0" prefWidth="600.0" stylesheets="@praktikum3.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="praktikum3.FXMLDocumentController">
+  <tabs>
+    <Tab text="Weindaten">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="670.0" prefWidth="600.0">
+               <children>
+                  <VBox prefHeight="700.0" prefWidth="600.0">
+                     <children>
+                        <HBox prefHeight="50.0" prefWidth="200.0" spacing="100.0">
+                           <children>
+                              <Label prefWidth="200.0" text="Bestellnummer">
+                                 <HBox.margin>
+                                    <Insets left="15.0" top="15.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <MaskField fx:id="tfNummer" mask="2018-AAA-DDDD" prefWidth="170.0" text="2018-">
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </MaskField>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="200.0" spacing="100.0">
+                           <children>
+                              <Label prefWidth="200.0" text="Name">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="16.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="tfName" prefWidth="170.0">
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin></TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="200.0" spacing="100.0">
+                           <children>
+                              <Label prefWidth="200.0" text="Jahrgang">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="16.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <MaskField fx:id="tfJahrgang" mask="DDDD" prefWidth="170.0">
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </MaskField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="200.0" spacing="100.0">
+                           <children>
+                              <Label prefWidth="200.0" text="Farbe">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="16.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ComboBox fx:id="farbe" prefWidth="170.0">
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin></ComboBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="70.0" prefWidth="600.0">
+                           <children>
+                              <VBox prefHeight="70.0" prefWidth="600.0">
+                                 <children>
+                                    <Label text="Anbaugebiet">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="16.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox prefHeight="46.0" prefWidth="600.0" spacing="13.0">
+                                       <children>
+                                          <Label text="Land">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="16.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="land" prefWidth="170.0" />
+                                          <Label text="Region">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="region" prefWidth="170.0" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="190.0" text="Alkoholgehalt">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="15.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <CheckBox fx:id="alkoholfrei" mnemonicParsing="false" text="Alkoholfrei">
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </CheckBox>
+                              <Spinner fx:id="alkohol" prefWidth="170.0">
+                                 <HBox.margin>
+                                    <Insets top="8.0" />
+                                 </HBox.margin>
+                              </Spinner>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="600.0" spacing="100.0">
+                           <children>
+                              <Label prefWidth="200.0" text="Beschreibung">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="15.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextArea fx:id="beschreibung" prefHeight="100.0" prefWidth="170.0">
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin></TextArea>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="382.0" prefWidth="600.0" spacing="100.0">
+                           <children>
+                              <VBox prefHeight="300.0" prefWidth="600.0">
+                                 <children>
+                                    <HBox prefHeight="50.0" prefWidth="600.0" spacing="100.0">
+                                       <children>
+                                          <Label prefWidth="200.0" text="Flaschengröße">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="15.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="groessenwahl" onAction="#boxAction" prefWidth="170.0">
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                          </ComboBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="104.0" prefWidth="600.0" spacing="100.0">
+                                       <children>
+                                          <Label prefHeight="20.0" prefWidth="250.0" text="Flaschenpreis">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="15.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <VBox prefHeight="98.0" prefWidth="500.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <NumberTextField fx:id="tfFlaschenpreisNetto" prefWidth="170.0">
+                                                         <HBox.margin>
+                                                            <Insets left="80.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </NumberTextField>
+                                                      <Label text="€ (netto)">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" top="15.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <NumberTextField fx:id="tfFlaschenpreisBrutto" prefWidth="170.0">
+                                                         <HBox.margin>
+                                                            <Insets left="80.0" />
+                                                         </HBox.margin>
+                                                      </NumberTextField>
+                                                      <Label text="€ (brutto)">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" top="10.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="50.0" prefWidth="600.0" spacing="25.0">
+                                       <children>
+                                          <Button id="bRunter" fx:id="bRunter" mnemonicParsing="false" onAction="#bRunterAction" prefHeight="50.0" prefWidth="70.0">
+                                             <HBox.margin>
+                                                <Insets left="315.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button id="bRauf" fx:id="bRauf" mnemonicParsing="false" onAction="#bRaufAction" prefHeight="50.0" prefWidth="70.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="50.0" prefWidth="600.0">
+                                       <children>
+                                          <Label prefWidth="200.0" text="Preis pro l">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="15.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <NumberTextField fx:id="tfLiterpreis" prefWidth="170.0">
+                                             <HBox.margin>
+                                                <Insets left="100.0" top="10.0" />
+                                             </HBox.margin>
+                                          </NumberTextField>
+                                          <Label text="€ (brutto)">
+                                             <HBox.margin>
+                                                <Insets left="5.0" top="15.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="50.0" prefWidth="600.0" spacing="100.0">
+                                       <children>
+                                          <Label prefWidth="200.0" text="Lagerdauer">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="15.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Spinner fx:id="sLagerdauer" prefWidth="170.0">
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                          </Spinner>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="125.0" prefWidth="200.0" spacing="25.0">
+                                       <children>
+                                          <Button fx:id="bSpeichern" mnemonicParsing="false" onAction="#bSpeichernAction" text="Speichern">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="bAbbrechen" mnemonicParsing="false" onAction="#bAbbrechenAction" text="Abbrechen">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="15.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Trinkreife">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <BorderPane prefHeight="200.0" prefWidth="550.0">
+                      <center>
+                        <VBox fx:id="diagram" prefHeight="30.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <StackPane prefHeight="30.0" prefWidth="160.0" snapToPixel="false">
+                                 <children>
+                                    <FlowPane snapToPixel="false">
+                                       <children>
+                                          <Rectangle id="rectTooEarly" fx:id="rectTooEarly" styleClass="rect" />
+                                          <Rectangle id="rectRising" fx:id="rectRising" styleClass="rect" />
+                                          <Rectangle id="rectGood" fx:id="rectGood" styleClass="rect" />
+                                          <Rectangle id="rectDecline" fx:id="rectDecline" styleClass="rect" />
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane snapToPixel="false">
+                                       <children>
+                                          <Rectangle id="rectPast" fx:id="rectPast" styleClass="rectTransparent" />
+                                          <Rectangle id="rectNow" fx:id="rectNow" styleClass="rectTransparent" />
+                                          <Rectangle id="rectFuture" fx:id="rectFuture" styleClass="rectTransparent" />
+                                       </children>
+                                    </FlowPane>
+                                 </children>
+                              </StackPane>
+                              <StackPane prefHeight="30.0">
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <Label fx:id="lbVintage" />
+                                          <Label fx:id="lbDecline" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="10.0">
+                                       <children>
+                                          <Label fx:id="lbPast" />
+                                          <Label id="lbNow" fx:id="lbNow" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </VBox>
+                  </center>
+                  <top>
+                     <Pane prefHeight="20.0" BorderPane.alignment="CENTER" />
+                  </top>
+                  <bottom>
+                     <FlowPane prefHeight="20.0" BorderPane.alignment="CENTER" />
+                  </bottom>
+                  <left>
+                     <Pane prefWidth="20.0" BorderPane.alignment="CENTER" />
+                  </left>
+                  <right>
+                     <Pane prefWidth="20.0" BorderPane.alignment="CENTER" />
+                  </right>
+                  </BorderPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

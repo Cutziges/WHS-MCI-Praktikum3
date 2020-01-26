@@ -1,0 +1,66 @@
+/*
+ * Stylesheet file.
+ * Author: Sarah Grugiel
+ */
+    .root {
+        -tooEarlyColor: lightgrey;
+        -goodColor: lime;
+        -declineColor: yellow;
+        -normalColor: black;
+        -accentColor: red;
+    }
+
+    .rect {
+        -fx-stroke: none;
+        -fx-stroke-type: inside;
+    }
+
+    #rectTooEarly {
+        -fx-fill: -tooEarlyColor;
+    }
+
+    #rectRising {
+        -fx-fill: linear-gradient(from 0% 50% to 100% 50%, -tooEarlyColor, -goodColor);
+    }
+
+    #rectGood {
+        -fx-fill: -goodColor;
+    }
+
+    #rectDecline {
+        -fx-fill: -declineColor;
+    }
+
+    .rectTransparent {
+        -fx-fill: transparent;
+        -fx-stroke: -normalColor;
+        -fx-stroke-type: inside;
+        -fx-stroke-width: 2;
+    }
+
+    #rectNow {
+        -fx-stroke: -accentColor;
+        -fx-stroke-width: 4;
+    }
+
+    .label {
+        -fx-text-fill: -normalColor;
+    }
+
+    #lbNow {
+        -fx-text-fill: -accentColor;
+    }
+    
+    #bRunter {
+        -fx-background-image: url("runter.png");
+        -fx-background-size: 35 50;
+        -fx-background-repeat: no-repeat;
+        -fx-background-position:center;
+    }
+    
+    #bRauf {          
+        -fx-background-image: url("hoch.png");
+        -fx-background-size: 35 50;
+        -fx-background-repeat: no-repeat;
+        -fx-background-position:center;
+    }
